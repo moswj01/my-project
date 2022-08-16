@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maintenances",
+  "info": {
+    "singularName": "maintenance",
+    "pluralName": "maintenances",
+    "displayName": "maintenance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "maintenance_id": {
+      "type": "string"
+    },
+    "maintenance_type": {
+      "type": "string"
+    },
+    "create_at": {
+      "type": "datetime"
+    },
+    "equipment": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::equipment.equipment",
+      "mappedBy": "maintenance"
+    }
+  }
+}

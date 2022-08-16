@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipments",
+  "info": {
+    "singularName": "equipment",
+    "pluralName": "equipments",
+    "displayName": "equipment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tool_type": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "size": {
+      "type": "string"
+    },
+    "qty": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "descriptions": {
+      "type": "string"
+    },
+    "tool_no": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "booking": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::booking.booking",
+      "inversedBy": "equipment"
+    },
+    "maintenance": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::maintenance.maintenance",
+      "inversedBy": "equipment"
+    },
+    "asset_no": {
+      "type": "string"
+    },
+    "tool_location": {
+      "type": "string"
+    },
+    "register_date": {
+      "type": "date"
+    },
+    "type_of_use": {
+      "type": "enumeration",
+      "enum": [
+        "A เครื่องมือประจำตัว",
+        "B เครื่องมือสอบเทียบ",
+        "C เครื่องมือวัด",
+        "D เครื่องมือควบคุม",
+        "E เครื่องมือประจำแผนก",
+        "F วัสดุสิ้นเปลือง",
+        "G เครื่องมือเช่า",
+        "H เครื่องมือทั่วไป",
+        "I เครื่องมือ Asset"
+      ],
+      "default": "A เครื่องมือประจำตัว"
+    }
+  }
+}
