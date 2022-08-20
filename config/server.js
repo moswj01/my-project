@@ -3,6 +3,6 @@ module.exports = ({ env }) => ({
   port: env.int("PORT", 1337),
   app: {
     keys: env.array("APP_KEYS"),
-    url: env("PUBLIC_URL", "https://api.wjtech.co"),
+    url: env("PUBLIC_URL", "https://api.wjtech.co/admin"),
   },
 });
