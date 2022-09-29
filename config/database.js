@@ -4,7 +4,10 @@ module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: env("DATABASE_HOST", "127.0.0.1"),
+      host: env(
+        "DATABASE_HOST",
+        "app-d7968c65-68c1-4d86-8ff7-49649cfe756e-do-user-12172055-0.b.db.ondigitalocean.com"
+      ),
       port: env.int("DATABASE_PORT", 25060),
       database: env("DATABASE_NAME", "defaultdb"),
       user: env("DATABASE_USERNAME", "doadmin"),
